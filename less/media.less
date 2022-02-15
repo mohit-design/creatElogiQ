@@ -1,0 +1,1096 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.navbar-menu-listing { display: @flex !important; flex: 7; }
+
+	/*------- Menu Listing CSS Ends -------*/
+
+	/*------- Banner and Content CSS Starts -------*/
+
+.banner-content-img { width: 85%; }
+.banner-heading {
+	& > h1 {
+		font-size: 3rem;
+	}
+}
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- About Section CSS Starts -------*/
+
+.bg-about { padding: @webPads*2 @webPads; }
+.section-heading {
+	& > h2 {
+		font-size: 3rem;
+	}
+	& > p {
+		text-align: justify;
+		word-break: break-word;
+	}
+}
+.panel-seo-smm { margin: 0 0 15px; }
+.section-sub-heading {
+	& > h3 {
+		font-size: 2.4rem;
+		margin: 0 0 15px;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+.learn-about { text-align: @textCenter; }
+.btn-about-learn { &:extend(p); }
+
+	/*------- About Section CSS Ends -------*/
+
+	/*------- Services Section CSS Starts -------*/
+
+.bg-services { .bg-about(); }
+.home-service-heading {
+	& > h5 {
+		min-height: 48px;
+	}
+}
+
+	/*------- Services Section CSS Ends -------*/
+
+	/*------- Latest Projects CSS Starts -------*/
+
+.bg-latest { .bg-about(); }
+.bg-image-figcaption { text-align: @textCenter; width: @fullWidth; }
+.bg-image-figcaption {
+	& > p {
+		font-size: 2.2rem;
+	}
+}
+
+	/*------- Latest Projects CSS Ends -------*/
+
+	/*------- Best Pricing Plan Section CSS Starts -------*/
+
+.bg-pricing { .bg-about(); }
+.panel-best-plan { margin-top: @webPads*2; }
+.panel-plan, .price-value {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+.price-value {
+	& > h3 {
+		margin-bottom: 5px;
+	}
+}
+.pricing-heading {
+	& > p {
+		margin-bottom: @zero;
+	}
+}
+.price-table-listing {
+	& > li {
+		font-size: 1.6rem;
+	}
+}
+.get-price { padding: @webPads; }
+
+	/*------- Best Pricing Plan Section CSS Ends -------*/
+
+	/*------- Testimonial Slider Section CSS Starts -------*/
+
+.bg-testimonials { .bg-services(); }
+.testimonial {
+  & .description {
+  	font: normal 1.6rem/1.5 @krubLight;
+  	text-align: justify;
+  	word-break: break-all;
+  }
+}
+.testimonial {
+	& .testimonial-content {
+		padding: 35px 15px;
+	}
+}
+
+	/*------- Testimonial Slider Section CSS Ends -------*/
+
+	/*------- Footer Section CSS Starts -------*/
+
+.bg-footer { .bg-about(); }
+.foo-head {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+
+	/*------- Footer Section CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.bg-second-service { .bg-about(); }
+.section-heading {
+	& > h1 {
+		font-size: 3.6rem;
+	}
+}
+.services-name { 
+	font-size: 2.2rem; 
+}
+
+	/*------- Services Page CSS Ends -------*/
+
+	/*------- Team Page CSS Starts -------*/
+
+.bg-second-team { .bg-about(); }
+
+	/*------- Team Page CSS Ends -------*/
+
+	/*------- Accordian Page Starts -------*/
+
+.bg-second-faq { .bg-about(); }
+
+	/*------- Accordian Page Ends -------*/
+
+	/*------- Blog Page Starts -------*/
+
+.bg-second-blog { .bg-about(); }
+.blog-title { font-size: 2.2rem; }
+.by-admin { &:extend(p); }
+.blog-text { 
+	&:extend(p);
+	&:extend(.section-heading > p); 
+}
+.more-comments { &:extend(p); }
+
+	/*------- Blog Page Ends -------*/
+
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+	
+	/*------- Hamburger Menu CSS Starts -------*/
+
+.hamburger-menu-posie { align-items: @alignCenter; display: @flex; flex: 1; justify-content: @justifyCenter; }
+.hamburger-menu { display: @block; }
+
+	/*------- Hamburger Menu CSS Ends -------*/
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.navbar-menu-listing { background-color: @blackColor; display: @none; left: @zero; position: @absolute; top: 50px; width: @fullWidth; }
+.menu-listing {
+	display: @block;
+	& > li {
+		&:extend(.menu-listing);
+	}
+}
+
+	/*------- Menu Listing CSS Ends -------*/
+
+	/*------- Banner and Content CSS Starts -------*/
+
+.bg-banner { display: flex; height: 50vh; }
+.banner-content-img { left: @zero; position: @relative; top: @zero; transform: @none; width: @fullWidth; }
+.banner-heading {
+	& > h1 {
+		font-size: 2.7rem;
+		text-align: @textCenter;
+	}
+	& > p {
+		text-align: @textCenter;
+	}
+}
+.img-apply { width: 75%; }
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- About Section CSS Starts -------*/
+
+.bg-about { padding: @webPads*2 @webPads; }
+.section-heading {
+	& > h2 {
+		font-size: 3rem;
+	}
+	& > p {
+		font-size: 1.6rem;
+		text-align: justify;
+		word-break: break-word;
+	}
+}
+.panel-seo-smm { margin: 0 0 15px; }
+.section-sub-heading {
+	& > h3 {
+		font-size: 2.4rem;
+		margin: 0 0 15px;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+.learn-about { text-align: @textCenter; }
+.btn-about-learn { &:extend(p); }
+
+	/*------- About Section CSS Ends -------*/
+
+	/*------- Services Section CSS Starts -------*/
+
+.bg-services { .bg-about(); }
+.home-service-heading {
+	& > h5 {
+		font-size: 1.8rem;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+
+	/*------- Services Section CSS Ends -------*/
+
+	/*------- Latest Projects CSS Starts -------*/
+
+.bg-latest { .bg-about(); }
+.bg-image-figcaption { text-align: @textCenter; width: @fullWidth; }
+.bg-image-figcaption {
+	& > p {
+		font-size: 2rem;
+	}
+}
+
+	/*------- Latest Projects CSS Ends -------*/
+
+	/*------- Counter Section CSS Starts -------*/
+
+.bg-counter { .bg-about(); }
+.counte-projects {
+	& > i {
+		font-size: 4rem;
+	}
+}
+.counte-number {
+	& > span {
+		font-size: 2.7rem;
+	}
+}
+.counter-name {
+	& > p {
+		font-size: 2rem;
+	}
+}
+
+	/*------- Counter Section CSS Ends -------*/
+
+	/*------- Best Pricing Plan Section CSS Starts -------*/
+
+.bg-pricing { .bg-about(); }
+.panel-best-plan { margin-top: @webPads*2; }
+.new-sticky-tab { left: 3%; top: 20%; }
+.panel-plan, .price-value {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+.price-value {
+	padding: @webPads @webPads*2;
+	& > h3 {
+		margin-bottom: 5px;
+	}
+}
+.pricing-heading {
+	& > p {
+		margin-bottom: @zero;
+	}
+}
+.price-table-listing {
+	padding: @webPads;
+	& > li {
+		font-size: 1.6rem;
+	}
+}
+.get-price { .price-table-listing(); }
+
+	/*------- Best Pricing Plan Section CSS Ends -------*/
+
+	/*------- Testimonial Slider Section CSS Starts -------*/
+
+.bg-testimonials { .bg-services(); }
+.testimonial {
+  & .description {
+  	font: normal 1.6rem/1.5 @krubLight;
+  	text-align: justify;
+  	word-break: break-all;
+  }
+}
+.testimonial {
+	& .testimonial-content {
+		padding: 35px 15px;
+	}
+}
+
+	/*------- Testimonial Slider Section CSS Ends -------*/
+
+	/*------- Footer Section CSS Starts -------*/
+
+.bg-footer { .bg-about(); }
+.foo-head {
+	margin-top: @webPads*2;
+	& > h3 {
+		font-size: 2.4rem;
+		& + p {
+			&:extend(.section-heading > p);
+			& + p {
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+	& + .news-update {
+		& > p {
+			&:extend(.section-heading > p);
+		}
+	}
+}
+
+	/*------- Footer Section CSS Ends -------*/
+
+	/*------- About Us Page CSS Starts -------*/
+
+.bg-second-about,
+.bg-testimonials-about { .bg-second-service(); }
+.explore-company,
+.about-seo-head-desc {
+	& > p {
+		font-size: 1.6rem;
+		text-align: @textJustify;
+	}
+}
+
+	/*------- About Us Page CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.bg-second-service { .bg-about(); }
+.sub-bg-banner { height: 25vh; }
+.section-heading {
+	& > h1 {
+		font-size: 3.6rem;
+	}
+}
+.services-name { 
+	font-size: 2rem;
+	& + p {
+		&:extend(.section-heading > p);
+	} 
+}
+.media-service-box { min-height: 262px; }
+
+	/*------- Services Page CSS Ends -------*/
+
+	/*------- Project Page Starts -------*/
+
+.bg-second-project { padding: @webPads*2 @webPads @zero; }
+
+	/*------- Project Page Ends -------*/
+
+	/*------- Team Page Starts -------*/
+
+.bg-second-team { .bg-second-service(); }
+.team-name {
+	& > h3 {
+		font-size: 1.8rem;
+	}
+}
+.team-listing {
+	& > li {
+		& > a {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+	/*------- Team Page Ends -------*/
+
+	/*------- FAQ Page Starts -------*/
+
+.bg-second-faq { .bg-second-team(); }
+.accordion-default {
+	& > .accordion-heading {
+		font-size: 1.6rem;
+		& + .accordion-body {
+			& > p {
+				&:extend(p);
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+}
+
+	/*------- FAQ Page Ends -------*/
+
+	/*------- Blog Page Starts -------*/
+
+.bg-second-blog { .bg-about(); }
+.blog-title { font-size: 2rem; }
+.by-admin { &:extend(p); }
+.blog-text { 
+	&:extend(p);
+	&:extend(.section-heading > p); 
+}
+.more-comments { &:extend(p); }
+
+	/*------- Blog Page Ends -------*/
+
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) and (orientation: landscape) {
+
+	/*------- Banner and Content CSS Starts -------*/
+
+	.bg-banner { height: 100vh; }
+	.img-apply { width: 60%; }
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.sub-bg-banner { height: 50vh; }
+
+	/*------- Services Page CSS Starts -------*/
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.navbar-menu-listing { height: 228px; overflow-y: scroll; }
+	
+	/*------- Menu Listing CSS Ends -------*/
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+	/*------- Common CSS Starts -------*/
+
+p { font-size: 1.6rem; }
+
+	/*------- Common CSS Ends -------*/
+
+	/*------- Hamburger Menu CSS Starts -------*/
+
+.hamburger-menu-posie { align-items: @alignCenter; display: @flex; flex: 1; justify-content: @justifyCenter; }
+.hamburger-menu { display: @block; }
+
+	/*------- Hamburger Menu CSS Ends -------*/
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.navbar-menu-listing { background-color: @blackColor; display: @none; left: @zero; position: @absolute; top: 50px; width: @fullWidth; }
+.menu-listing {
+	display: @block;
+	& > li {
+		&:extend(.menu-listing);
+	}
+}
+
+	/*------- Menu Listing CSS Ends -------*/
+
+	/*------- Banner and Content CSS Starts -------*/
+
+.banner-content-img { align-items: @alignCenter; left: @halfWidth; margin: @zero auto; position: @relative; top: @halfWidth; transform: translate(-@halfWidth,-@halfWidth); width: @fullWidth; }
+.banner-heading {
+	& > h1 {
+		font-size: 2.4rem;
+		margin-top: @webPads;
+		text-align: @textCenter;
+	}
+	& > p {
+		font-size: 1.6rem;
+	}
+}
+.img-apply { width: 70%; }
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- About Section CSS Starts -------*/
+
+.bg-about { padding: @webPads*2 @webPads; }
+.section-heading {
+	& > h2 {
+		font-size: 2.7rem;
+	}
+	& > p {
+		text-align: justify;
+		word-break: break-all;
+	}
+}
+.panel-seo-smm { margin: 0 0 15px; }
+.section-sub-heading {
+	& > h3 {
+		font-size: 2rem;
+		margin: 0 0 15px;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+.learn-about { text-align: @textCenter; }
+.btn-about-learn { &:extend(p); }
+
+	/*------- About Section CSS Ends -------*/
+
+	/*------- Services Section CSS Starts -------*/
+
+.bg-services { .bg-about(); }
+.home-service-heading {
+	& > h5 {
+		font-size: 1.8rem;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+
+	/*------- Services Section CSS Ends -------*/
+
+	/*------- Latest Projects CSS Starts -------*/
+
+.bg-latest { .bg-about(); }
+.bg-image-figcaption { text-align: @textCenter; width: @fullWidth; }
+.bg-image-figcaption {
+	& > p {
+		font-size: 1.8rem;
+	}
+}
+
+	/*------- Latest Projects CSS Ends -------*/
+
+	/*------- Counter Section CSS Starts -------*/
+
+.bg-counter { .bg-about(); }
+.counte-projects {
+	& > i {
+		font-size: 3rem;
+	}
+}
+.counte-number {
+	& > span {
+		font-size: 2rem;
+	}
+}
+.counter-name {
+	& > p {
+		font-size: 1.8rem;
+		margin-bottom: 15px;
+	}
+}
+
+	/*------- Counter Section CSS Ends -------*/
+
+	/*------- Best Pricing Plan Section CSS Starts -------*/
+
+.bg-pricing { .bg-about(); }
+.panel-best-plan { margin-top: @webPads*2; }
+.new-sticky-tab { left: 3%; top: 20%; }
+.panel-plan, .price-value {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+.price-value {
+	padding: @webPads @webPads*2;
+	& > h3 {
+		margin-bottom: 5px;
+	}
+}
+.pricing-heading {
+	& > p {
+		margin-bottom: @zero;
+	}
+}
+.price-table-listing {
+	padding: @webPads;
+	& > li {
+		font-size: 1.4rem;
+	}
+}
+.get-price { .price-table-listing(); }
+
+	/*------- Best Pricing Plan Section CSS Ends -------*/
+
+	/*------- Testimonial Slider Section CSS Starts -------*/
+
+.bg-testimonials { .bg-services(); }
+.testimonial-heading {
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.testimonial {
+  & .description {
+  	font: normal 1.6rem/1.5 @krubLight;
+  	text-align: justify;
+  	word-break: break-all;
+  }
+}
+.testimonial {
+	& .testimonial-content {
+		padding: 35px 15px;
+	}
+}
+
+	/*------- Testimonial Slider Section CSS Ends -------*/
+
+	/*------- Footer Section CSS Starts -------*/
+
+.bg-footer { .bg-about(); }
+.foo-head {
+	& > h3 {
+		&:extend(.section-heading > h2);
+	}
+}
+.foo-head {
+	& > h3 {
+		& + p {
+			&:extend(.section-heading > p);
+			& + p {
+				margin-bottom: @webPads;
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+}
+.submit-btn { margin-bottom: @webPads; }
+.news-update {
+	& > p {
+		.submit-btn();
+		&:extend(.section-heading > p);
+	}
+}
+
+	/*------- Footer Section CSS Ends -------*/
+
+	/*------- About Us Page CSS Starts -------*/
+
+.bg-second-about,
+.bg-testimonials-about { .bg-second-service(); }
+.about-heading {
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.explore-company,
+.about-seo-head-desc {
+	& > p {
+		text-align: @textJustify;
+	}
+}
+.explore-company {
+	& > p {
+		&:last-child {
+			margin-bottom: @webPads;
+		}
+	}
+}
+.img-about-seo,
+.img-about-smm {
+	margin-bottom: @webPads;
+	width: @fullWidth; 
+}
+.about-seo-section { margin-bottom: @webPads; }
+
+	/*------- About Us Page CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.bg-second-service { .bg-about(); }
+.sub-bg-banner { height: 75vh; }
+.section-heading {
+	& > h1 {
+		font-size: 3rem;
+	}
+}
+.services-name { 
+	font-size: 1.8rem;
+	& + p {
+		&:extend(.section-heading > p);
+	} 
+}
+
+	/*------- Services Page CSS Ends -------*/
+
+	/*------- Project Page Starts -------*/
+
+.bg-second-project { padding: @webPads*2 @webPads @zero; }
+
+	/*------- Project Page Ends -------*/
+
+	/*------- Team Page Starts -------*/
+
+.bg-second-team { .bg-second-service(); }
+
+	/*------- Team Page Ends -------*/
+
+	/*------- Accordian Page Starts -------*/
+
+.bg-second-faq { .bg-second-team(); }
+.accordion-default {
+	& > .accordion-heading {
+		font-size: 1.6rem;
+		& + .accordion-body {
+			& > p {
+				&:extend(p);
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+}
+
+	/*------- Accordian Page Ends -------*/
+
+	/*------- Blog Page Starts -------*/
+
+.bg-second-blog { .bg-about(); }
+.blog-title { font-size: 1.8rem; }
+.by-admin { &:extend(p); }
+.blog-text { 
+	&:extend(p);
+	&:extend(.section-heading > p); 
+}
+.more-comments { &:extend(p); }
+
+	/*------- Blog Page Ends -------*/
+
+}
+
+@media only screen and (max-width: 575px) {
+
+	/*------- Common CSS Starts -------*/
+
+p { font-size: 1.4rem; }
+
+	/*------- Common CSS Ends -------*/
+
+	/*------- Hamburger Menu CSS Starts -------*/
+
+.hamburger-menu-posie { align-items: @alignCenter; display: @flex; flex: 1; justify-content: @justifyCenter; }
+.hamburger-menu { display: @block; }
+
+	/*------- Hamburger Menu CSS Ends -------*/
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.navbar-menu-listing { background-color: @blackColor; display: @none; left: @zero; position: @absolute; top: 50px; width: @fullWidth; }
+.menu-listing {
+	display: @block;
+	& > li {
+		&:extend(.menu-listing);
+		& > a {
+			&:extend(p);
+			letter-spacing: @letterSpace + 0.3px;
+		}
+	}
+}
+
+	/*------- Menu Listing CSS Ends -------*/
+
+	/*------- Banner and Content CSS Starts -------*/
+
+.banner-content-img { align-items: @alignCenter; left: @zero; margin: @zero auto; position: @relative; top: 50px; transform: @none; width: @fullWidth; }
+.banner-heading {
+	& > h1 {
+		font-size: 2.4rem;
+		padding-top: @webPads;
+		text-align: @textCenter;
+	}
+	& > p {
+		font-size: 1.6rem;
+		margin-bottom: @webPads;
+		text-align: @textCenter;
+	}
+}
+.img-auto { width: 75%; }
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- About Section CSS Starts -------*/
+
+.bg-about { padding: @webPads; }
+.section-heading {
+	& > h2 {
+		font-size: 2.7rem;
+	}
+	& > p {
+		text-align: justify;
+		word-break: break-word;
+	}
+}
+.panel-seo-smm { margin: 0 0 15px; }
+.section-sub-heading {
+	& > h3 {
+		font-size: 2rem;
+		margin: 0 0 15px;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+.learn-about { text-align: @textCenter; }
+.btn-about-learn { &:extend(p); }
+
+	/*------- About Section CSS Ends -------*/
+
+	/*------- Services Section CSS Starts -------*/
+
+.bg-services { .bg-about(); }
+.panel-home-services { margin-top: @webPads; }
+.home-service-heading {
+	& > h5 {
+		font-size: 1.8rem;
+	}
+	& > p {
+		&:extend(.section-heading > p);
+	}
+}
+
+	/*------- Services Section CSS Ends -------*/
+
+	/*------- Latest Projects CSS Starts -------*/
+
+.bg-latest { .bg-about(); }
+.img-projects { .panel-home-services(); }
+.bg-image-figcaption { text-align: @textCenter; width: @fullWidth; }
+.bg-image-figcaption {
+	& > p {
+		font-size: 1.8rem;
+	}
+}
+.home-view-projects { .panel-home-services(); }
+
+	/*------- Latest Projects CSS Ends -------*/
+
+	/*------- Counter Section CSS Starts -------*/
+
+.bg-counter { .bg-about(); }
+.counte-projects {
+	& > i {
+		font-size: 2.7rem;
+	}
+}
+.counte-number {
+	& > span {
+		font-size: 1.8rem;
+	}
+}
+.counter-name {
+	& > p {
+		font-size: 1.6rem;
+		margin-bottom: 15px;
+	}
+}
+
+	/*------- Counter Section CSS Ends -------*/
+
+	/*------- Best Pricing Plan Section CSS Starts -------*/
+
+.bg-pricing { .bg-about(); }
+.panel-plan, .price-value {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+.price-value {
+	padding: @webPads @webPads*2;
+	& > h3 {
+		margin-bottom: 5px;
+	}
+}
+.pricing-heading {
+	& > p {
+		margin-bottom: @zero;
+	}
+}
+.price-table-listing {
+	padding: @webPads;
+	& > li {
+		font-size: 1.4rem;
+	}
+}
+.get-price { .price-table-listing(); }
+
+	/*------- Best Pricing Plan Section CSS Ends -------*/
+
+	/*------- Testimonial Slider Section CSS Starts -------*/
+
+.bg-testimonials { .bg-services(); }
+.testimonial-heading {
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.testimonial {
+  & .description {
+  	font: normal 1.4rem/1.5 @krubLight;
+  	text-align: justify;
+  	word-wrap: break-word;
+  }
+}
+.testimonial {
+	& .testimonial-content {
+		padding: 35px 15px;
+	}
+}
+	
+	/*------- Testimonial Slider Section CSS Ends -------*/
+
+	/*------- Footer Section CSS Starts -------*/
+
+.bg-footer { .bg-about(); }
+.foo-head {
+	& > h3 {
+		font-size: 2.4rem;
+	}
+}
+.foo-head {
+	& > h3 {
+		& + p {
+			&:extend(.section-heading > p);
+			& + p {
+				margin-bottom: @webPads;
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+}
+.contact-form { &:extend(.price-table-listing > li); }
+.submit-btn { margin-bottom: @webPads; }
+.news-update {
+	& > p {
+		.submit-btn();
+		&:extend(.section-heading > p);
+	}
+}
+
+	/*------- Footer Section CSS Ends -------*/
+
+	/*------- About Us Page CSS Starts -------*/
+
+.bg-second-about,
+.bg-testimonials-about { .bg-second-service(); }
+.about-heading,
+.projects-heading {
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.explore-company,
+.about-seo-head-desc {
+	& > p {
+		text-align: @textJustify;
+	}
+}
+.explore-company {
+	& > p {
+		&:last-child {
+			margin-bottom: @webPads;
+		}
+	}
+}
+.img-about-seo,
+.img-about-smm {
+	margin-bottom: @webPads;
+	width: @fullWidth; 
+}
+.about-seo-section { margin-bottom: @webPads; }
+
+	/*------- About Us Page CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.bg-second-service { .bg-about(); }
+.section-heading {
+	& > h1 {
+		font-size: 3rem;
+	}
+}
+.services-name { 
+	font-size: 1.8rem;
+	& + p {
+		&:extend(p);
+		&:extend(.section-heading > p);
+	} 
+}
+.media-service-box { margin-top: @webPads; }
+
+	/*------- Services Page CSS Ends -------*/
+
+	/*------- Project Page Starts -------*/
+
+.bg-second-project { padding: @webPads @webPads @zero; }
+.img-latest-projects { margin-bottom: @webPads; }
+
+	/*------- Project Page Ends -------*/
+
+	/*------- Team Page Starts -------*/
+
+.bg-second-team { .bg-second-service(); }
+.team-figure { .media-service-box(); }
+
+	/*------- Team Page Ends -------*/
+
+	/*------- Accordian Page Starts -------*/
+
+.bg-second-faq { .bg-second-team(); }
+.accordion-default {
+	& > .accordion-heading {
+		font-size: 1.6rem;
+		&:first-child {
+			.media-service-box();
+		}
+		&:after {
+			display: @none;
+		}
+		& + .accordion-body {
+			& > p {
+				&:extend(p);
+				&:extend(.section-heading > p);
+			}
+		}
+	}
+}
+
+	/*------- Accordian Page Ends -------*/
+
+	/*------- Blog Page Starts -------*/
+
+.bg-second-blog { .bg-about(); }
+.card-blog { margin-top: @webPads; }
+.blog-title { font-size: 1.8rem; }
+.by-admin { &:extend(p); }
+.blog-text { 
+	&:extend(p);
+	&:extend(.section-heading > p); 
+}
+.more-comments { &:extend(p); }
+.pagination-center { margin: @webPads @zero @zero; }
+
+	/*------- Blog Page Ends -------*/
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+	
+	/*------- Banner and Content CSS Starts -------*/
+
+.img-apply { width: 18%; }
+
+	/*------- Banner and Content CSS Ends -------*/
+
+	/*------- Services Page CSS Starts -------*/
+
+.sub-bg-banner { height: 100vh; }
+
+	/*------- Services Page CSS Ends -------*/
+
+}

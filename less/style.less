@@ -1,0 +1,1134 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+/*------- Font Family Starts -------*/
+
+@font-face { font-family: @krubLight; src: url("../font/Krub-Light.ttf"); }
+@font-face { font-family: @krubRegular; src: url("../font/Krub-Regular.ttf"); }
+@font-face { font-family: @krubMedium; src: url("../font/Krub-Medium.ttf"); }
+@font-face { font-family: @krubSemiBold; src: url("../font/Krub-SemiBold.ttf"); }
+@font-face { font-family: @krubBold; src: url("../font/Krub-Bold.ttf"); }
+
+/*------- Font Family Ends -------*/
+
+/*------- Reset CSS Starts -------*/
+
+html { font-size: @fixedFontSize; letter-spacing: @letterSpace; }
+h1, h2, h3, h4, h5, p, figure, ul { margin: @zero; padding: @zero; }
+li { list-style: @none; }
+a {
+	text-decoration: @none;
+	transition: @hoverDuration;
+	&:hover {
+		text-decoration: @none;
+	}
+	&:focus {
+		text-decoration: @none;
+	}
+}
+
+/*------- Reset CSS Ends -------*/
+
+/*------- Common CSS Starts -------*/
+
+.flex { display: @flex; }
+.align-center { align-items: @alignCenter; }
+.justify-center { justify-content: @justifyCenter; }
+.justify-end { justify-content: @justifyEnd; }
+.flex-0 { flex: @zero; }
+.flex-1 { flex: 1; }
+.flex-4 { flex: 4; }
+.relative { position: @relative; }
+.absolute { position: @absolute; }
+.fixed { position: @fixed; }
+.transform-center { left: @halfWidth; position: @absolute; top: @halfWidth; transform: translate(-@halfWidth,-@halfWidth); }
+p { @{colorProperty}: @blackColor; font-family: @krubLight; font-size: 1.8rem; }
+.img-responsive { display: @block; height: auto; max-width: @fullWidth; }
+.img-auto { margin: @zero auto; }
+.mb-15 { margin-bottom: @webPads; }
+.relative-overflow { overflow: hidden; .relative(); }
+
+/*------- Common CSS Ends -------*/
+
+/*------- Navigationbar Menu Starts -------*/
+
+.web-name {
+	& > p {
+		color: @whiteColor; font-family: @krubBold; font-size: 3rem;
+		& > span { @{colorProperty}: @websiteColor; }
+	}
+}
+
+	/*------- Fixed Header CSS Starts -------*/
+	
+.fixed-header {
+	background-@{colorProperty}: @blackColor;
+	padding: @zero @webPads;
+	position: @fixed;
+	left: @zero;
+	top: @zero;
+	width: @fullWidth;
+	z-index: 2;
+}
+
+	/*------- Fixed Header CSS Ends -------*/
+
+	/*------- Hamburger Menu CSS Starts -------*/
+
+.hamburger-menu {
+	background-@{colorProperty}: @blackColor;
+	cursor: pointer;
+	display: @none;
+	height: 50px;
+	position: @relative;
+	width: 50px;
+}
+.hamburger-menu {
+	span {
+		background-@{colorProperty}: @whiteColor;
+		height: 2px;
+		width: 25px;
+	}
+}
+.hamburger-menu {
+	span {
+		&:after {
+			&:extend(.hamburger-menu span);
+			content: "";
+			position: @absolute;
+			top: 10px;
+		}
+		&:before {
+			&:extend(.hamburger-menu span:after);
+			top: -10px;
+		}
+	}
+}
+
+	/*------- Hamburger Menu CSS Ends -------*/
+
+	/*------- Menu Listing CSS Starts -------*/
+
+.menu-listing {
+	display: @flex;
+	& > li {
+		display: inline-block;
+		& > a {
+			.box-shadow(inset 0 0 0 0 #8c52dc);
+			@{colorProperty}: @whiteColor;
+			display: @block;
+			font-family: @krubRegular;
+			font-size: 1.8rem;
+			padding: @webPads;
+			transition: @hoverDuration;
+			&:hover {
+				.box-shadow(inset 0 -57px 0 0 #8c52dc);
+				@{colorProperty}: @whiteColor;
+			}
+			&:focus {
+				.box-shadow(inset 0 -57px 0 0 #8c52dc);
+				@{colorProperty}: @whiteColor;
+			}
+		}
+		&.active {
+			& > a {
+				.box-shadow(inset 0 -57px 0 0 #8c52dc);
+				@{colorProperty}: @whiteColor;
+			}
+		}
+	}
+}
+.btn-login {
+	@{colorProperty}: @whiteColor;
+	border: 2px solid @whiteColor;
+	box-shadow: inset @zero -34px @zero @zero @websiteColor;
+	font-family: @krubRegular;
+	font-size: 1.6rem;
+	padding: .5rem 2rem;
+	transition: @hoverDuration;
+	&:hover {
+		box-shadow: inset @zero @zero @zero @zero @websiteColor;
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		box-shadow: inset @zero -34px @zero @zero @websiteColor;
+	}
+}
+
+	/*------- Menu Listing CSS Ends -------*/
+
+/*------- Navigationbar Menu Ends -------*/
+
+/*------- Banner and Content CSS Starts -------*/
+
+.bg-banner { background: url("@{image}/banner.png") no-repeat fixed; background-size: cover; height: 100vh; }
+.banner-heading {
+	& > h1 {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubBold;
+		font-size: 4rem;
+		margin-bottom: 15px;
+	}
+	& > p {
+		@{colorProperty}: #c1d7ff;
+		font-family: @krubRegular;
+	}
+}
+.banner-content-img { align-items: @alignCenter; margin: @zero auto; width: 75%; }
+
+/*------- Banner and Content CSS Ends -------*/
+
+/*------- About Section CSS Starts -------*/
+
+.bg-about { padding: (@webPads*3)+5px @webPads; }
+.section-heading {
+	& > h2 {
+		@{colorProperty}: @blackColor;
+		font-family: @krubBold;
+		font-size: 3.6rem;
+		margin-bottom: @webPads;
+		& > span {
+			@{colorProperty}: @websiteColor; 
+		}
+	}
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.panel-seo-smm { background-@{colorProperty} : #eee; .box-shadow(inset @zero @zero @zero @zero @websiteColor); margin: @webPads @zero; .radius(7px); padding: @webPads; transition: @hoverDuration; }
+.panel-seo-smm {
+	&:hover {
+		.box-shadow(inset @zero 7px @zero @zero @websiteColor);
+	}
+}
+.seo-smm-icon-mars { margin-right: 10px; }
+.section-sub-heading {
+	& > h3 {
+		@{colorProperty}: @blackColor;
+		font-family: @krubSemiBold;
+		font-size: 3rem;
+		margin: @webPads @zero;
+	}
+	& > p {
+		margin-bottom: @webPads;
+	}
+}
+.btn-about-learn {
+	background-@{colorProperty}: @websiteHoverColor;
+	@{colorProperty}: @whiteColor;
+	border: 2px solid @whiteColor;
+	.box-shadow(inset @zero 47px @zero @zero @websiteColor);
+	font-family: @krubMedium;
+	font-size: 1.8rem;
+	letter-spacing: @letterSpace + 0.3px;
+	padding: 1rem 3rem;
+	.radius(7px);
+	transition: @hoverDuration;
+	&:hover {
+		.box-shadow(inset @zero @zero @zero @zero @websiteColor);
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		.box-shadow(inset @zero 47px @zero @zero @websiteColor);
+	}
+}
+
+/*------- About Section CSS Ends -------*/
+
+/*------- Services Section CSS Starts -------*/
+
+.bg-services { .bg-about(); background-@{colorProperty}: @sectionColor; }
+.service-heading, .latepro-heading {
+	& > p {
+		margin-bottom: @zero;
+	}
+}
+.home-service-icons {
+ 	display: inline-block; margin-bottom: @webPads; padding: @webPads*2;
+	& > i {  
+		font-size: 2.4rem; 
+	}
+}
+.home-service-heading {
+	& > h5 {
+		@{colorProperty}: @blackColor;
+		font-family: @krubMedium;
+		font-size: 2rem;
+		margin-bottom: @webPads;
+		.transition(@hoverDuration);
+	}
+}
+.home-service-search { 
+	background-@{colorProperty}: #ffdce7;
+	& > i {
+		@{colorProperty}: #f13162;
+	}
+}
+.home-service-edit { 
+	background-@{colorProperty}: #caffe7;
+	& > i {
+		@{colorProperty}: #4dcd92;
+	} 
+}
+.home-service-chart { 
+	background-@{colorProperty}: #d5caff;
+	& > i {
+		@{colorProperty}: #9c83ff;
+	} 
+}
+.home-service-highlighter { 
+	background-@{colorProperty}: #ffcfb2;
+	& > i {
+		@{colorProperty}: #ff9b5f;
+	} 
+}
+.home-service-bullhorn { 
+	background-@{colorProperty}: #caedff;
+	& > i {
+		@{colorProperty}: #3bbefe;
+	} 
+}
+.home-service-globe { 
+	background-@{colorProperty}: #ffd6d9;
+	& > i {
+		@{colorProperty}: #e95766;
+	} 
+}
+.panel-home-services {
+	background-@{colorProperty}: @whiteColor;
+	border: 2px solid #eee;
+	.radius(50px);
+	margin-top: @webPads*2;
+	padding: @webPads*2;
+	.transition(@hoverDuration);
+	&:hover {
+		.radius(25px);
+		& > .home-service-heading {
+			h5 {
+				@{colorProperty}: @websiteColor;
+			}
+		}
+	}
+}
+
+/*------- Services Section CSS Ends -------*/
+
+/*------- Latest Projects CSS Starts -------*/
+
+.bg-latest { .bg-about(); }
+.img-projects { .radius(7px); margin-top: @webPads*2; }
+.bg-image-fig {
+	&:before {
+		background: #e31e3c;
+		background-image: -moz-linear-gradient(left,#e31d3b 0%,#b700b4 100%);
+		background-image: -o-linear-gradient(left,#e31d3b 0%,#b700b4 100%);
+		background-image: -webkit-linear-gradient(left,#e31d3b 0%,#b700b4 100%);
+		background-image: linear-gradient(left,#e31d3b 0%,#b700b4 100%);
+		.radius(7px);
+		content: '';
+		height: @fullWidth;
+		left: @zero;
+		position: @absolute;
+		top: @zero;
+		width: @zero;
+		.transition(@hoverDuration);
+	}
+	&:hover {
+		&:before {
+			width: @fullWidth;
+		}
+		.bg-image-figcaption {
+			& > p {
+				opacity: 1;
+			}
+		}
+	}
+}
+.bg-image-figcaption {
+	& > p {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubMedium;
+		font-size: 2.4rem;
+		letter-spacing: @letterSpace+ 0.3px;
+		opacity: 0;
+		.transition(@hoverDuration);
+	}
+}
+.home-view-projects { margin-top: @webPads*2; }
+
+/*------- Latest Projects CSS Ends -------*/
+
+/*------- Counter Section CSS Starts -------*/
+
+.bg-counter { 
+	.bg-about();
+	background: url("@{image}/counter.jpg") no-repeat center center;
+	background-size: cover;
+	position: @relative;
+	z-index: @zero;
+	&:after {
+		position: absolute;
+    left: 0;
+    top: 0;
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(100, 63, 203, 0.9)), to(rgba(100, 98, 201, 0.8)));
+    background-image: -webkit-linear-gradient(right, rgba(100, 63, 203, 0.9), rgba(100, 98, 201, 0.8));
+    background-image: -o-linear-gradient(right, rgba(100, 63, 203, 0.9), rgba(100, 98, 201, 0.8));
+    background-image: linear-gradient(to left, rgba(100, 63, 203, 0.9), rgba(100, 98, 201, 0.8));
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+	}
+}
+.counte-projects {
+	margin-bottom: @webPads;
+	& > i {
+		font-size: 5rem;
+	}
+}
+.suitcase-icon { @{colorProperty}: #f13162; }
+.smile-icon { @{colorProperty}: #4dcd92; }
+.trophy-icon { @{colorProperty}: #ff9b5f; }
+.coffee-icon { @{colorProperty}: #3bbefe; }
+.counte-number {
+	& > span {
+		@{colorProperty}: @whiteColor; 
+		font-family: @krubSemiBold;
+		font-size: 3rem;
+		letter-spacing: 2px;
+		margin-bottom: @webPads;
+	}
+}
+.counter-name {
+	& > p {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubRegular;
+		font-size: 2.4rem;
+	}
+}
+
+/*------- Counter Section CSS Ends -------*/
+
+/*------- Best Pricing Plan Section CSS Starts -------*/
+
+.bg-pricing { .bg-about(); }
+.panel-best-plan { margin-top: @webPads; }
+.panel-plan {
+	border: 2px solid @blackColor;
+	padding: @webPads*2;
+	& > h3 {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubSemiBold;
+		font-size: 3rem;
+	}
+}
+.panel-basic-plan { background-@{colorProperty}: @basicPlanColor; }
+.panel-advance-plan { background-@{colorProperty}: @advancePlanColor; }
+.panel-platinum-plan { background-@{colorProperty}: @platinumPlanColor; }
+.new-sticky { 
+	background-@{colorProperty}: @blackColor; 
+	@{colorProperty}: @whiteColor; 
+	left: 5%; 
+	padding: 5px; 
+	text-align: @textCenter; 
+	top: 15%; 
+	transform-origin: left top; 
+	transform: rotate(-45deg) translate(-50%,@zero); 
+	width: @fullWidth;
+	& > p {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubRegular;
+	}
+}
+.panel-price-body { border: 2px solid @blackColor; border-top: 0; }
+.price-value {
+	padding: @webPads*2;
+	& > h3 {
+		@{colorProperty}: @blackColor;
+		font-family: @krubMedium;
+		font-size: 3rem;
+	}
+	& > p {
+		font-family: @krubRegular;
+	}
+}
+.hori-line-price { margin: @zero; }
+.price-table-listing {
+	padding: @webPads*2;
+	& > li {
+		color: @blackColor;
+		font-family: @krubRegular;
+		font-size: 1.8rem;
+		margin-bottom: 5px;
+		& > i {
+			@{colorProperty}: @basicPlanColor;
+			padding-right: 5px;
+		}
+		&:last-child {
+			margin-bottom: @zero;
+		}
+	}
+}
+.get-price { .price-table-listing(); }
+.panel-advance-table-listing {
+	& > li {
+		& > i {
+			@{colorProperty}: @advancePlanColor; 
+		}
+	}
+}
+.panel-platinum-table-listing {
+	& > li {
+		& > i {
+			@{colorProperty}: @platinumPlanColor; 
+		}
+	}
+}
+.btn-basic-plan {
+	background-@{colorProperty}: @blackColor;
+	.radius(7px);
+	.box-shadow(inset @zero 47px @zero @zero @basicPlanColor);
+	&:hover {
+		.box-shadow(inset @zero @zero @zero @zero @basicPlanColor);
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		.box-shadow(inset @zero 47px @zero @zero @basicPlanColor);
+	}
+}
+.btn-advance-plan {
+	background-@{colorProperty}: @blackColor;
+	.radius(7px);
+	.box-shadow(inset @zero 47px @zero @zero @advancePlanColor);
+	&:hover {
+		.box-shadow(inset @zero @zero @zero @zero @advancePlanColor);
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		.box-shadow(inset @zero 47px @zero @zero @advancePlanColor);
+	}
+}
+.btn-platinum-plan {
+	background-@{colorProperty}: @blackColor;
+	.radius(7px);
+	.box-shadow(inset @zero 47px @zero @zero @platinumPlanColor);
+	&:hover {
+		.box-shadow(inset @zero @zero @zero @zero @platinumPlanColor);
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		.box-shadow(inset @zero 47px @zero @zero @platinumPlanColor);
+	}
+}
+
+/*------- Best Pricing Plan Section CSS Ends -------*/
+
+/*------- Testimonial Slider Section CSS Starts -------*/
+
+.bg-testimonials { .bg-services(); }
+.testimonial-heading {
+	& > p {
+		margin-bottom: @webPads*2;
+	}
+}
+.testimonial { margin: 0 20px 20px; }
+.img-testimonials { width: @halfWidth; }
+.testimonial {
+	& .testimonial-content {
+		background-@{colorProperty}: @whiteColor;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 35px;
+    padding: 35px 25px 35px 50px;
+    position: @relative;
+	}
+}
+.testimonial {
+	& .testimonial-content {
+		&:after {
+			background-@{colorProperty}: @whiteColor;
+			bottom: -10px;
+			content: "";
+			display: inline-block;
+			height: 20px;
+			left: 22px;
+			position: @absolute;
+			transform: rotate(45deg);
+			width: 20px;
+		}
+	}
+}
+.testimonial-content {
+	& .testimonial-icon {
+		background-@{colorProperty}: @websiteColor;
+		@{colorProperty}: @whiteColor;
+		font-size: 2.2rem;
+		height: 45px;
+		left: -19px;
+		line-height: 42px;
+		position: @absolute;
+		text-align: @textCenter;
+		top: 37px;
+		width: 50px;
+	}
+}
+.testimonial-content {
+	& .testimonial-icon {
+		&:before {
+			border-bottom: 16px solid #e41212;
+    	border-left: 18px solid transparent;
+    	content: "";
+    	left: 1px;
+    	position: @absolute;
+    	top: -16px;
+		}
+	}
+}
+.testimonial {
+  & .description {
+		@{colorProperty}: @blackColor;
+  	font: normal 1.8rem/1.5 @krubLight;
+  }
+}
+.testimonial {
+	& .title {
+		@{colorProperty}: @blackColor;
+		display: @block;
+		font: 2rem/1.2 @krubMedium;
+		margin: 0 0 5px 0;
+		text-transform: uppercase;
+	}
+}
+.testimonial {
+	& .post {
+		@{colorProperty}: @websiteColor;
+		display: @block;
+		font-size: 1.6rem;
+	}
+}
+.owl-theme {
+	& .owl-controls {
+		margin-top: 20px;
+	}
+}
+.owl-theme {
+	& .owl-controls {
+		& .owl-page {
+			& span {
+				background-@{colorProperty}: @blackColor;
+				opacity: 1;
+				transition: @hoverDuration;
+			}
+		}
+	}
+}
+.owl-theme {
+	& .owl-controls {
+		& .owl-page {
+			&.active {
+				& span {
+					background-@{colorProperty}: @websiteColor;
+				}
+			}
+			&:hover {
+				& span {
+					background-@{colorProperty}: @websiteColor;
+				}
+			}
+		}
+	}
+}
+
+/*------- Testimonial Slider Section CSS Ends -------*/
+
+/*------- Footer Section CSS Starts -------*/
+
+.bg-footer {
+	background: #5d30c8;
+	background: -webkit-linear-gradient(to right, #5d30c8, #ad68e9);
+	background: linear-gradient(to right, #5d30c8, #ad68e9);
+	.bg-about();
+}
+.foo-head {
+	& > h3 {
+		@{colorProperty}: @whiteColor;
+		font-family: @krubSemiBold;
+		font-size: 3rem;
+		margin-bottom: @webPads;
+		& > span {
+			@{colorProperty}: @websiteColor;
+		}
+		& + p {
+			@{colorProperty}: @whiteColor;
+			margin-bottom: @webPads;
+		}
+		& + p + p {
+			@{colorProperty}: @whiteColor;
+		}
+	}
+}
+.form-icon {
+	background-@{colorProperty}: #7c46d5;
+	border: 2px solid @whiteColor;
+	@{colorProperty}: @whiteColor;
+	font-size: 1.6rem;
+	height: calc(2.25rem + 2px);
+	padding: 2rem;
+}
+.contact-form {
+	border: 2px solid @whiteColor;
+	font-family: @krubRegular;
+	letter-spacing: @letterSpace;
+	padding: 2rem .75rem;
+	font-size: 1.6rem;
+	&:focus {
+		border-@{colorProperty}: @whiteColor;
+		.box-shadow(none);
+	}
+	&::placeholder {
+		@{colorProperty}: #7c46d5;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		@{colorProperty}: #7c46d5;
+	}
+	&::-ms-input-placeholder {
+		@{colorProperty}: #7c46d5;
+	}
+}
+.textarea-form-icon { height: 150px; }
+textarea {
+	&.contact-form {
+		height: 150px;
+		padding: 1rem .75rem;
+		resize: none;
+	}
+}
+.news-update {
+	& > p {
+		@{colorProperty}: @whiteColor;
+		margin-bottom: @webPads - 5px;
+		letter-spacing: @letterSpace + 0.3px;
+		&:last-child {
+			margin-bottom: @zero;
+		}
+	}
+}
+
+/*------- Footer Section CSS Ends -------*/
+
+/*------- Design Detail CSS Starts -------*/
+
+.design-bg { background-@{colorProperty}: @websiteColor; padding: @webPads; }
+.copyright { @{colorProperty}: @whiteColor; font-family: @krubRegular; letter-spacing: @letterSpace + 0.3px; margin-bottom: @webPads - 10px; }
+.design { .copyright(); margin-bottom: @zero; }
+.designer-name { 
+	@{colorProperty}: @blackColor; 
+	font-family: @krubMedium;
+	&:hover {
+		@{colorProperty}: @blackColor;
+	} 
+}
+
+/*------- Design Detail CSS Ends -------*/
+
+/*------- Custom Scrollbar Section CSS Starts -------*/
+
+::-webkit-scrollbar { width: 15px; transition: 2s linear; }
+::-webkit-scrollbar-track { background-color: @websiteHoverColor; }
+::-webkit-scrollbar-thumb { background-color: @whiteColor; }
+::-webkit-scrollbar-thumb:hover { background-color: @websiteColor; }
+
+/*------- Custom Scrollbar Section CSS Ends -------*/
+
+/*------- Scroll To Top Section CSS Starts -------*/
+
+.scroll-to-top { 
+	background-@{colorProperty}: @websiteColor; 
+	.radius(50%); 
+	bottom: 20px; 
+	height: 40px;
+	opacity: 0; 
+	position: fixed; 
+	right: 20px; 
+	width: 40px;
+	transition: 0.5s linear;
+}
+.scroll-to-top {
+	&:hover {
+		background-@{colorProperty}: @websiteHoverColor;
+	}
+}
+.scroll-to-top {
+	&.visible {
+		opacity: 1;
+	}
+}
+.scroll-to-top {
+	& i {
+		@{colorProperty}: @whiteColor;
+		font-size: 1.6rem;
+	}
+}
+
+/*------- Scroll To Top Section CSS Ends -------*/
+
+/*------- Services Page CSS Starts -------*/
+
+	/*------- First Section CSS Starts -------*/
+
+.sub-bg-banner {
+	background: url("@{image}/banner-bg.png") no-repeat;
+	background-size: cover;
+	height: 50vh;
+}
+.section-heading > h1 {
+	@{colorProperty}: @whiteColor;
+	font: 4rem/1.2 @krubBold;
+	letter-spacing: @letterSpace + 0.3px;
+	padding-top: 100px;
+}
+
+	/*------- First Section CSS Ends -------*/
+
+	/*------- Second Section CSS Starts -------*/
+
+.bg-second-service { .bg-about(); }
+.media-service-box { 
+	background-@{colorProperty}: @sectionColor; 
+	.radius(10%); 
+	margin-top: @webPads*2; 
+	padding: @webPads*2;
+	transition: @hoverDuration;
+	.box-shadow(inset 0 0 0 0 #f13162);
+	&:hover {
+		.box-shadow(inset 0 7px 0 0 #f13162);;
+	} 
+}
+.services-name {
+	@{colorProperty}: @blackColor;
+	font: 2.4rem/1.2 @krubSemiBold;
+	margin-bottom: @webPads - 5px;
+	& + p {
+		font: 1.6rem/1.5 @krubLight;
+	}
+}
+
+	/*------- Second Section CSS Ends -------*/
+
+/*------- Services Page Ends -------*/
+
+/*------- Team Page Starts -------*/
+
+	/*------- Second Section Starts -------*/
+
+.bg-second-team { .bg-second-service(); }
+.team-figure {
+	margin-top: @webPads*2;
+	.transition(@hoverDuration);
+	& img {
+		.transition(@hoverDuration);
+		width: @fullWidth;
+	}
+	&:hover {
+		& .team-members {
+			.transform(translateX(0));
+		}
+		& img {
+			filter: brightness(70%);
+			.transform(scale(1.1));
+		}
+	}
+	& .team-members {
+		.transition(@hoverDuration);
+	}
+}
+.team-members {
+	background-@{colorProperty}: #0000007d;
+	left: @zero;
+	top: @zero;
+	height: @fullWidth;
+	.transform(translateX(-100%));
+}
+.team-listing {
+	height: @fullWidth;
+	& > li {
+		align-items: @alignCenter;
+		display: @flex;
+		height: @fullWidth/4;
+		& > a {
+			color: @whiteColor;
+			display: @block;
+			font-size: 2rem;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			width: 40px;
+			&:hover {
+				background-@{colorProperty}: @blackColor;
+			}
+		}
+	}
+}
+.team-name {
+	margin-top: 10px;
+	& > h3 {
+		color: @blackColor;
+		font: 2rem/1.5 @krubSemiBold;
+	}
+	& > p {
+		font: 1.6rem/1.5 @krubRegular;
+	}
+}
+
+	/*------- Second Section Ends -------*/
+
+/*------- Team Page Ends -------*/
+
+/*------- Accordian Page Starts -------*/
+
+.bg-second-faq { .bg-second-team(); }
+
+	/*------- Accordian Menu CSS Starts -------*/
+
+.accordion-default {
+	& > .accordion-heading {
+		align-items: @alignCenter;
+		background-@{colorProperty}: @blackColor;
+		@{colorProperty}: @whiteColor;
+		cursor: pointer;
+		display: @flex;
+		font: 1.8rem/1.5 @krubMedium;
+		margin-top: @webPads;
+		padding: @webPads - 5px;
+		position: @relative;
+		& + .accordion-body {
+			background-@{colorProperty}: @sectionColor;
+			display: @none;
+			padding: @webPads;
+			& > p {
+				font: 1.6rem/1.5 @krubRegular
+			}
+		}
+		&:first-child {
+			margin-top: @webPads*2;
+		}
+		&:after {
+			content: "\f067";
+			font-family: "Font Awesome 5 Free";
+    	font-weight: 900;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		&.active {
+			&:after {
+				content: "\f068";
+			}
+		}
+	}
+}
+
+	/*------- Accordian Menu CSS Ends -------*/
+
+/*------- Accordian Page Ends -------*/
+
+/*------- Blog Page Starts -------*/
+
+.bg-second-blog { .bg-about(); }
+.card-blog { border: @zero; margin: @webPads*2 @zero @zero; }
+.blog-body { 
+	background-@{colorProperty}: @sectionColor;
+	padding: @webPads;
+	& + .card-footer {
+		background-@{colorProperty}: @sectionColor;
+	}
+}
+.blog-title {
+	color: @blackColor;
+	font: 2.4rem/1.2 @krubSemiBold;
+	margin-bottom: @zero;
+}
+.by-admin {
+	@{colorProperty}: @blackColor;
+	font: 1.6rem/1.5 @krubLight;
+	margin: 10px @zero;
+	& > span {
+		margin: @zero 10px; 
+	}
+}
+.blog-text {
+	@{colorProperty}: @blackColor;
+	font: 1.6rem/1.5 @krubRegular;
+}
+.more-comments {
+	font: 1.6rem/1.5 @krubRegular;
+	& > a {
+		@{colorProperty}: @blackColor;
+		font: 1.6rem/1.5 @krubRegular;
+		& > i.double-rights {
+			margin: 0 0 0 5px;
+		}
+	}
+	& > i {
+		margin-right: 5px;
+	}
+}
+.pagination-center {
+	margin: @webPads*2 @zero @zero;
+}
+.pagination-lg {
+	& .page-link {
+		border: 1px solid #ccc;
+		@{colorProperty}: @blackColor;
+		font: 1.6rem/1.5 @krubRegular;
+		&:focus {
+			.box-shadow(@none);
+		}
+	}
+}
+
+/*------- Blog Page Ends -------*/
+
+/*------- About Page Starts -------*/
+
+	/*------- Second Section Starts -------*/
+
+.bg-second-about { .bg-second-faq(); }
+.about-heading {
+	& > p {
+		margin-bottom: 50px;
+	}
+}
+.explore-company {
+	& > h4 {
+		color: @blackColor;
+		font: 2.4rem/1.2 "Krub-SemiBold";
+		margin-bottom: @webPads;
+	}
+	& > p {
+		margin-bottom: @webPads;
+		&:last-child {
+			margin-bottom: 50px;
+		}
+	}
+}
+.about-seo-section { margin-bottom: 50px; }
+.about-seo-head-desc {
+	& > h4 {
+		&:extend(.explore-company > h4);
+	}
+	& > p {
+		&:extend(.explore-company > p);
+		&:last-child {
+			margin-bottom: @zero;
+		}
+	}
+}
+
+	/*------- Second Section Ends -------*/
+
+	/*------- Counter and Testimonials Section Starts -------*/
+
+.bg-counter-about { .bg-counter(); }
+.bg-testimonials-about { .bg-testimonials(); }
+
+	/*------- Counter and Testimonials Section Ends -------*/
+
+/*------- About Page Ends -------*/
+
+/*------- Projects Page Starts -------*/
+
+	/*------- Second Section Starts -------*/
+
+.bg-second-project { padding: 50px 15px 20px; }
+.projects-heading {
+	& > p {
+		&:extend(.about-heading > p);
+	}
+}
+.img-latest-projects { margin-bottom: 30px; }
+.project-title-name { margin-bottom: 30px; text-align: center; }
+
+	/*------- Second Section Ends -------*/
+
+/*------- Projects Page Ends -------*/
+
+/*------- Contact Us Page Starts -------*/
+
+	/*------- Second Section Starts -------*/
+
+.bg-second-contact { .bg-second-about(); }
+.form-group-contact { margin-bottom: 30px; }
+.form-control-contact {
+	border: 1px solid @blackColor;
+	color: @blackColor;
+	font: 1.6rem/1.42857143 @krubRegular;
+	height: 40px;
+	letter-spacing: 1px;
+	&::placeholder {
+	  color: @blackColor;
+	  opacity: 1;
+	}
+	&:-ms-input-placeholder {
+	  color: @blackColor;
+	}
+	&::-ms-input-placeholder {
+	  color: @blackColor;
+	}
+	&:focus {
+		border-color: @blackColor;
+		.box-shadow(@none);
+	}
+}
+textarea {
+	&.form-control-contact {
+		height: 100px;
+		resize: @none;
+	}
+}
+.btn-contact {
+	background-color: @websiteHoverColor;
+	@{colorProperty}: @whiteColor;
+	border: 2px solid @whiteColor;
+	.radius(7px);
+	box-shadow: inset @zero -51px @zero @zero @websiteColor;
+	font-family: @krubRegular;
+	font-size: 1.8rem;
+	padding: 10px 30px;
+	transition: @hoverDuration;
+	&:hover {
+		box-shadow: inset @zero @zero @zero @zero @websiteColor;
+		@{colorProperty}: @whiteColor;
+	}
+	&:focus {
+		box-shadow: inset @zero -51px @zero @zero @websiteColor;
+	}
+}
+
+	/*------- Second Section Ends -------*/
+
+	/*------- Third Section Starts -------*/
+
+.bg-third-contact { padding: 0 15px 50px; }
+.box-contact-info {
+	border: 2px solid @blackColor;
+	.radius(7px);	
+	padding: @webPads;
+	& > i {
+		display: @block;
+		font-size: 2.4rem;
+		margin-bottom: @webPads;
+		text-align: @textCenter;
+	}
+	& > p {
+		text-align: @textCenter;
+		& > a {
+			color: @blackColor;
+		}
+	}
+}
+
+	/*------- Third Section Ends -------*/
+
+/*------- Contact Us Page Ends -------*/
+
